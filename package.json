@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@xeho91/stylelint-config",
+  "version": "0.1.0",
+  "description": "xeho91's Stylelint reusable configuration.",
+  "keywords": [
+    "Stylelint",
+    "linter",
+    "CSS"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": {
+    "name": "Mateusz Kadlubowski",
+    "email": "xeho91@pm.me",
+    "url": "https://xeho91.com/"
+  },
+  "homepage": "https://github.com/xeho91/stylelint-config",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xeho91/stylelint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xeho91/stylelint-config/issues"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "stylelint-8-point-grid": "^1.0.0",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recess-order": "^2.4.0",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-declaration-strict-value": "^1.7.12",
+    "stylelint-declaration-use-variable": "^1.7.3",
+    "stylelint-high-performance-animation": "^1.5.2",
+    "stylelint-no-unsupported-browser-features": "^5.0.1",
+    "stylelint-order": "^4.1.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^13.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.4",
+    "@types/stylelint": "^13.13.0",
+    "stylelint": "^13.13.1"
+  }
+}
