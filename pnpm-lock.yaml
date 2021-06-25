@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@types/node': ^15.12.4
   '@types/stylelint': ^13.13.0
+  deepmerge: ^4.2.2
   stylelint: ^13.13.1
   stylelint-8-point-grid: ^1.0.0
   stylelint-a11y: ^1.2.3
@@ -32,6 +33,7 @@ dependencies:
 devDependencies:
   '@types/node': 15.12.4
   '@types/stylelint': 13.13.0
+  deepmerge: 4.2.2
   stylelint: 13.13.1
 
 packages:
@@ -557,6 +559,11 @@ packages:
   /decamelize/1.2.0:
     resolution: {integrity: sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=}
     engines: {node: '>=0.10.0'}
+
+  /deepmerge/4.2.2:
+    resolution: {integrity: sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==}
+    engines: {node: '>=0.10.0'}
+    dev: true
 
   /dir-glob/3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}

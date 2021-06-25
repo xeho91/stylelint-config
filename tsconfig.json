@@ -11,7 +11,8 @@
 
     "types": ["node", "stylelint"],
 
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true
   },
   "exclude": ["node_modules/"]
 }

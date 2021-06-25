@@ -1,5 +1,2 @@
 node_modules/
 lib/
-
-# Ignore any JS files, compiled by TypeScript
-*.js
