@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/package",
 	"name": "@xeho91/stylelint-config",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "xeho91's Stylelint reusable configuration.",
 	"keywords": [
 		"Stylelint",
@@ -39,6 +39,7 @@
 	"dependencies": {
 		"stylelint-8-point-grid": "^1.0.0",
 		"stylelint-a11y": "^1.2.3",
+		"stylelint-color-format": "^1.1.0",
 		"stylelint-config-prettier": "^8.0.2",
 		"stylelint-config-recess-order": "^2.4.0",
 		"stylelint-config-recommended": "^5.0.0",

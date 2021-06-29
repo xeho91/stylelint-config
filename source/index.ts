@@ -2,6 +2,7 @@ import merge from "deepmerge";
 
 import plugin8pointGrid from "./plugins/8-point-grid";
 import pluginA11y from "./plugins/a11y";
+import pluginColorFormat from "./plugins/color-format";
 import pluginCSStreeValidator from "./plugins/csstree-validator";
 import pluginDeclarationStrictValue from "./plugins/declaration-strict-value";
 import pluginHighPerformanceAnimation from "./plugins/high-performance-animation";
@@ -34,6 +35,7 @@ const config = merge.all([
 	stylelint,
 	plugin8pointGrid,
 	pluginA11y,
+	pluginColorFormat,
 	pluginCSStreeValidator,
 	pluginDeclarationStrictValue,
 	pluginHighPerformanceAnimation,
