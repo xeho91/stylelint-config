@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/package",
 	"name": "@xeho91/stylelint-config",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "xeho91's Stylelint reusable configuration.",
 	"keywords": [
 		"Stylelint",
@@ -25,9 +25,9 @@
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com"
 	},
-	"main": "lib/index.js",
+	"main": "dist/index.js",
 	"files": [
-		"lib/**/*"
+		"dist/**/*"
 	],
 	"scripts": {
 		"clean": "rimraf \"./dist\"",
