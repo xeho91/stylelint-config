@@ -5,16 +5,16 @@ import hasModule from "./helpers/has-module";
 
 const configurations = [
 	require("stylelint").default,
-	require("plugin8pointGrid").default,
-	require("pluginA11y").default,
-	require("pluginColorFormat").default,
-	require("pluginCSStreeValidator").default,
-	require("pluginDeclarationStrictValue").default,
-	require("pluginHighPerformanceAnimation").default,
-	require("pluginNoUnsupportedBrowserFeatures").default,
-	require("pluginOrder").default,
-	hasModule("prettier") && require("pluginPrettier").default,
-	hasModule("sass") && require("pluginScss").default,
+	require("plugins/8pointGrid").default,
+	require("plugins/A11y").default,
+	require("plugins/ColorFormat").default,
+	require("plugins/CSStreeValidator").default,
+	require("plugins/DeclarationStrictValue").default,
+	require("plugins/HighPerformanceAnimation").default,
+	require("plugins/NoUnsupportedBrowserFeatures").default,
+	require("plugins/Order").default,
+	hasModule("prettier") && require("plugins/Prettier").default,
+	hasModule("sass") && require("plugins/Scss").default,
 ];
 
 const config = merge.all(configurations);
