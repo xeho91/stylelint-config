@@ -1,48 +1,22 @@
+/* eslint-disable unicorn/prefer-module, @typescript-eslint/no-var-requires */
 import merge from "deepmerge";
 
-import plugin8pointGrid from "./plugins/8-point-grid";
-import pluginA11y from "./plugins/a11y";
-import pluginColorFormat from "./plugins/color-format";
-import pluginCSStreeValidator from "./plugins/csstree-validator";
-import pluginDeclarationStrictValue from "./plugins/declaration-strict-value";
-import pluginHighPerformanceAnimation from "./plugins/high-performance-animation";
-import pluginNoUnsupportedBrowserFeatures from "./plugins/no-unsupported-browser-features";
-import pluginOrder from "./plugins/order";
-import pluginPrettier from "./plugins/prettier";
-import stylelint from "./stylelint";
+import hasModule from "./helpers/has-module";
 
-import type { Configuration } from "stylelint";
+const configurations = [
+	require("stylelint").default,
+	require("plugin8pointGrid").default,
+	require("pluginA11y").default,
+	require("pluginColorFormat").default,
+	require("pluginCSStreeValidator").default,
+	require("pluginDeclarationStrictValue").default,
+	require("pluginHighPerformanceAnimation").default,
+	require("pluginNoUnsupportedBrowserFeatures").default,
+	require("pluginOrder").default,
+	hasModule("prettier") && require("pluginPrettier").default,
+	hasModule("sass") && require("pluginScss").default,
+];
 
-const global: Partial<Configuration> = {
-	ignoreFiles: [
-		// Unignore files starting with dot (usually config files)
-		"!.*",
-		// Ignore directories
-		".git/**/*",
-		".husky/**/*",
-		".svelte-kit/**/*",
-		".vercel/**/*",
-		".vercel_build_output/**/*",
-		"build/**/*",
-		"lib/**/*",
-		"dist/**/*",
-		"node_modules/**/*",
-	],
-};
+const config = merge.all(configurations);
 
-const config = merge.all([
-	global,
-	stylelint,
-	plugin8pointGrid,
-	pluginA11y,
-	pluginColorFormat,
-	pluginCSStreeValidator,
-	pluginDeclarationStrictValue,
-	pluginHighPerformanceAnimation,
-	pluginNoUnsupportedBrowserFeatures,
-	pluginOrder,
-	pluginPrettier,
-]);
-
-/* eslint-disable-next-line unicorn/prefer-module */
 module.exports = config;

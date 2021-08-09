@@ -22,6 +22,9 @@ const config: Partial<Configuration> = {
 				noEmptyLineBetween: false,
 				properties: [
 					"position",
+					"inset",
+					"inset-block",
+					"inset-inline",
 					"top",
 					"right",
 					"bottom",
@@ -30,68 +33,69 @@ const config: Partial<Configuration> = {
 				],
 			},
 			{
-				// Display mode.
-				emptyLineBefore: "always",
-				noEmptyLineBetween: false,
-				properties: ["box-sizing", "display"],
-			},
-			{
-				// Flexible boxes.
+				// Flex & grid layout (children)
 				emptyLineBefore: "always",
 				noEmptyLineBetween: false,
 				properties: [
+					// Flex
 					"flex",
 					"flex-basis",
-					"flex-direction",
-					"flex-flow",
 					"flex-grow",
 					"flex-shrink",
-					"flex-wrap",
+					// Grid
+					"grid-area",
+					"grid-row-start",
+					"grid-row-end",
+					"grid-column-start",
+					"grid-column-end",
+					// Shared
+					"align-self",
+					"justify-self",
+					"place-self",
 				],
 			},
 			{
-				// Grid layout.
+				// Display & layout alignment (parent - flex, grid)
 				emptyLineBefore: "always",
 				noEmptyLineBetween: false,
 				properties: [
+					"box-sizing",
+					"display",
+					// Flex
+					"flex-direction",
+					"flex-flow",
+					"flex-wrap",
+					// Grid
 					"grid",
-					"grid-area",
 					"grid-template",
 					"grid-template-areas",
 					"grid-template-rows",
 					"grid-template-columns",
 					"grid-row",
-					"grid-row-start",
-					"grid-row-end",
 					"grid-column",
-					"grid-column-start",
-					"grid-column-end",
 					"grid-auto-rows",
 					"grid-auto-columns",
 					"grid-auto-flow",
-					"grid-gap",
-					"grid-row-gap",
-					"grid-column-gap",
+					// Shared
+					"align-content",
+					"align-items",
+					"place-content",
+					"place-items",
+					"justify-content",
+					"justify-items",
 				],
 			},
 			{
 				// Gap.
 				emptyLineBefore: "always",
 				noEmptyLineBetween: false,
-				properties: ["gap", "row-gap", "column-gap"],
-			},
-			{
-				// Layout alignment.
-				emptyLineBefore: "always",
-				noEmptyLineBetween: false,
 				properties: [
-					"place-items",
-					"align-content",
-					"align-items",
-					"align-self",
-					"justify-content",
-					"justify-items",
-					"justify-self",
+					"gap",
+					"row-gap",
+					"column-gap",
+					"grid-gap",
+					"grid-row-gap",
+					"grid-column-gap",
 				],
 			},
 			{
